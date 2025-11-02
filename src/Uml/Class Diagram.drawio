@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0" version="28.2.8">
+  <diagram id="skillforge-diagram" name="SkillForge Class Diagram">
+    <mxGraphModel dx="1415" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="u1" value="&lt;html&gt;&lt;body&gt;&lt;b&gt;User (abstract)&lt;/b&gt;&lt;br/&gt;- userId : int&lt;br/&gt;- userName : String&lt;br/&gt;- email : String&lt;br/&gt;- password : String&lt;br/&gt;+ login()&lt;br/&gt;+ logout()&lt;/body&gt;&lt;/html&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="360" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="u2" value="&lt;html&gt;&lt;body&gt;&lt;b&gt;Student&lt;/b&gt;&lt;br/&gt;- enrolledCourses : List&amp;lt;Course&amp;gt;&lt;br/&gt;- certificates : List&amp;lt;Certificate&amp;gt;&lt;br/&gt;- analytics : Analytics&lt;br/&gt;+ enrollInCourse(Course)&lt;br/&gt;+ completeLesson(Lesson)&lt;br/&gt;+ takeQuiz(Quiz)&lt;/body&gt;&lt;/html&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="60" y="140" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="u3" value="&lt;html&gt;&lt;body&gt;&lt;b&gt;Instructor&lt;/b&gt;&lt;br/&gt;- createdCourses : List&amp;lt;Course&amp;gt;&lt;br/&gt;+ createCourse()&lt;br/&gt;+ uploadLesson()&lt;br/&gt;+ designQuiz()&lt;/body&gt;&lt;/html&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="360" y="140" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="u4" value="&lt;html&gt;&lt;body&gt;&lt;b&gt;Admin&lt;/b&gt;&lt;br/&gt;+ approveCourse(Course)&lt;br/&gt;+ removeCourse(Course)&lt;br/&gt;+ monitorAnalytics()&lt;/body&gt;&lt;/html&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="660" y="140" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="&lt;html&gt;&lt;body&gt;&lt;b&gt;Course&lt;/b&gt;&lt;br/&gt;- courseId : int&lt;br/&gt;- title : String&lt;br/&gt;- description : String&lt;br/&gt;- lessons : List&amp;lt;Lesson&amp;gt;&lt;br/&gt;- quizzes : List&amp;lt;Quiz&amp;gt;&lt;br/&gt;- instructor : Instructor&lt;br/&gt;+ addLesson(Lesson)&lt;br/&gt;+ addQuiz(Quiz)&lt;br/&gt;+ getProgress(Student)&lt;/body&gt;&lt;/html&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="320" y="260" width="260" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" value="&lt;html&gt;&lt;body&gt;&lt;b&gt;Lesson&lt;/b&gt;&lt;br/&gt;- lessonId : int&lt;br/&gt;- title : String&lt;br/&gt;- content : String&lt;br/&gt;- resourceLink : String&lt;/body&gt;&lt;/html&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="60" y="320" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="q1" value="&lt;html&gt;&lt;body&gt;&lt;b&gt;Quiz&lt;/b&gt;&lt;br/&gt;- quizId : int&lt;br/&gt;- questions : List&amp;lt;Question&amp;gt;&lt;br/&gt;+ evaluate(Student) : float&lt;/body&gt;&lt;/html&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="60" y="440" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ques" value="&lt;html&gt;&lt;body&gt;&lt;b&gt;Question&lt;/b&gt;&lt;br/&gt;- questionId : int&lt;br/&gt;- text : String&lt;br/&gt;- options : List&amp;lt;String&amp;gt;&lt;br/&gt;- correctAnswer : String&lt;/body&gt;&lt;/html&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="420" y="420" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cert" value="&lt;html&gt;&lt;body&gt;&lt;b&gt;Certificate&lt;/b&gt;&lt;br/&gt;- certificateId : int&lt;br/&gt;- student : Student&lt;br/&gt;- course : Course&lt;br/&gt;- dateIssued : Date&lt;/body&gt;&lt;/html&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="660" y="320" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="an" value="&lt;html&gt;&lt;body&gt;&lt;b&gt;Analytics&lt;/b&gt;&lt;br/&gt;- completedCourses : int&lt;br/&gt;- totalTimeSpent : double&lt;br/&gt;- averageGrade : double&lt;/body&gt;&lt;/html&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="660" y="440" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="db" value="&lt;html&gt;&lt;body&gt;&lt;b&gt;JsonDatabaseManager&lt;/b&gt;&lt;br/&gt;+ saveData()&lt;br/&gt;+ loadData()&lt;br/&gt;+ updateData()&lt;/body&gt;&lt;/html&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="300" y="520" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="svc1" value="&lt;html&gt;&lt;body&gt;&lt;b&gt;UserService&lt;/b&gt;&lt;br/&gt;+ manageUserData()&lt;br/&gt;+ authenticateUser()&lt;/body&gt;&lt;/html&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="60" y="560" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="svc2" value="&lt;html&gt;&lt;body&gt;&lt;b&gt;CourseService&lt;/b&gt;&lt;br/&gt;+ manageCourse()&lt;br/&gt;+ getCourseData()&lt;/body&gt;&lt;/html&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="360" y="620" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="svc3" value="&lt;html&gt;&lt;body&gt;&lt;b&gt;QuizService&lt;/b&gt;&lt;br/&gt;+ manageQuiz()&lt;br/&gt;+ evaluateQuiz()&lt;/body&gt;&lt;/html&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="660" y="600" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="endArrow=block;endFill=1;dashed=0;strokeWidth=1;" parent="1" source="u2" target="u1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="endArrow=block;endFill=1;dashed=0;strokeWidth=1;" parent="1" source="u3" target="u1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="endArrow=block;endFill=1;dashed=0;strokeWidth=1;" parent="1" source="u4" target="u1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="endArrow=none;" parent="1" source="c1" target="u3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="endArrow=none;" parent="1" source="l1" target="c1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="endArrow=none;" parent="1" source="q1" target="c1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="endArrow=none;" parent="1" source="ques" target="q1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="endArrow=none;" parent="1" source="cert" target="u2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="endArrow=none;" parent="1" source="cert" target="c1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" style="endArrow=none;" parent="1" source="an" target="u2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" style="endArrow=none;" parent="1" source="db" target="c1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" style="endArrow=none;" parent="1" source="svc1" target="db" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" style="endArrow=none;" parent="1" source="svc2" target="db" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" style="endArrow=none;" parent="1" source="svc3" target="db" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
