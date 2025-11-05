@@ -1,0 +1,12 @@
+[
+    {
+        "lessonId": "L001",
+        "title": "Variables and Data Types",
+        "content": "Introduction to variables, types, and declarations."
+    },
+    {
+        "lessonId": "L002",
+        "title": "Control Structures",
+        "content": "If statements, loops, and logical expressions."
+    }
+]

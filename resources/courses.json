@@ -1,0 +1,29 @@
+[
+    {
+        "id": "C001",
+        "title": "Introduction to Programming",
+        "instructor": "U003",
+        "lessons": [
+            "L001",
+            "L002"
+        ],
+        "quizzes": [
+            "Q001"
+        ],
+        "students": [
+            "U001",
+            "U002"
+        ]
+    },
+    {
+        "id": "C002",
+        "title": "Data Structures",
+        "instructor": "U003",
+        "lessons": [
+            "L003",
+            "L004"
+        ],
+        "quizzes": [],
+        "students": []
+    }
+]
